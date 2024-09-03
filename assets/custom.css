@@ -1,0 +1,15 @@
+@import url('fonts.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Applying the font family with different weights */
+body {
+    font-family: 'Plus Jakarta Sans Regular', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.highlight {
+    color: #023020;
+}
