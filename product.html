@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Your page description with relevant keywords. Make it compelling to encourage clicks.">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/src/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/src/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/src/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/src/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/src/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/src/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/src/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/src/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/src/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/src/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/src/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/src/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/src/img/favicon/favicon-16x16.png">
+    <title>After Lensa - Photography Service Batam</title>
+    <link href="assets/src/styles/styles.css?v=2.1" rel="stylesheet">
+    <link href="assets/node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/src/styles/splide-core.min.css" rel="stylesheet">
+</head>
+<body class="relative mt-header">
+    <nav class="bg-white fixed w-full z-20 top-0 start-0">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 border-b border-gray-200">
+            <a href="#" onclick="app.scrollToElementById('home'); return false;" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="assets/src/img/black.png" class="h-6" alt="Afterlensa Logo">
+                <span class="text-primary font-plusJakartaBold self-center text-xl whitespace-nowrap">After Lensa</span>
+            </a>
+            <button id="navbar-toggler" data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden" aria-controls="navbar-sticky" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white">
+                    <li>
+                        <a href="index.html" class="block py-2 px-3 text-primary font-plusJakartaSemiBold">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="app.scrollToElementById('contactUs'); return false;" class="block py-2 px-3 text-primary font-plusJakartaSemiBold">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  
+    <section id="content" class="mx-auto min-h-body w-full max-w-screen-xl px-4">
+        <div id="contactUs" class="flex flex-col items-center justify-center py-14 lg:min-h-body">
+            <?php include('layout/contact-us.html')?>
+        </div>
+    </section>
+
+    <footer>
+        <div class="mx-auto items-center justify-center w-full max-w-screen-xl p-4 border-t">
+            <p class="text-center text-sm">© <?= date('Y'); ?> by <strong>After Lensa</strong> | All Rights Reserved</p>    
+        </div>
+    </footer>
+</body>
+<script src="assets/src/js/app.js?v=2"></script>
+<script src="assets/node_modules/flowbite/dist/flowbite.js"></script>
+<script src="assets/src/js/splide.min.js"></script>

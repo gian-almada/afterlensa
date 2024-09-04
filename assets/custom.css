@@ -13,3 +13,30 @@ body {
 .highlight {
     color: #023020;
 }
+
+.splide__pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem !important;
+}
+
+@media (max-width: 575px) {
+    .splide__pagination {
+        display: none !important;
+    }
+}
+
+.splide__pagination .splide__pagination__page {
+    border: 1px solid #28282B;
+    background-color: #ffffff;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+.splide__pagination .splide__pagination__page.is-active {
+    background-color: #28282B;
+}

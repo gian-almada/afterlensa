@@ -1,0 +1,20 @@
+<h4 class="text-3xl lg:text-5xl font-plusJakartaBold text-center leading-[160%]">Our Client</h4>
+<div class="flex flex-row flex-wrap items-center justify-center gap-16 mt-16 w-full">
+    <div class="splide w-full" id="clientSlide">
+        <div class="splide__track w-full">
+            <ul class="splide__list">
+                <?php 
+                    $directory = 'assets/src/img/client';
+                    $clients = scandir($directory);             
+                ?>
+                    <?php foreach($clients as $client):  if ($client === '.' || $client === '..') continue; ?>
+                    <li class="splide__slide flex justify-center">
+                        <div class="p-4 rounded-full w-full max-w-[170px] h-[170px]">
+                            <img width="150" height="150" class="rounded-full w-full h-full object-contain grayscale hover:grayscale-0 hover:cursor-pointer" alt="Client image" src="assets/src/img/client/<?= $client ?>">
+                        </div>
+                    </li>
+                    <?php endforeach; ?>
+            </ul>
+        </div>
+    </div>
+</div>

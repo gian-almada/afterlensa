@@ -22,9 +22,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/src/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/src/img/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/src/img/favicon/favicon-16x16.png">
-    <title><?= $pagetitle; ?> - <?= $tagline; ?></title>
-    <link href="assets/src/styles/styles.css" rel="stylesheet">
+    <title>After Lensa - Photography Service Batam</title>
+    <link href="assets/src/styles/styles.css?v=2.1" rel="stylesheet">
     <link href="assets/node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/src/styles/splide-core.min.css" rel="stylesheet">
 </head>
 <body class="relative mt-header">
     <nav class="bg-white fixed w-full z-20 top-0 start-0">
@@ -33,7 +34,7 @@
                 <img src="assets/src/img/black.png" class="h-6" alt="Afterlensa Logo">
                 <span class="text-primary font-plusJakartaBold self-center text-xl whitespace-nowrap">After Lensa</span>
             </a>
-            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+            <button id="navbar-toggler" data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden" aria-controls="navbar-sticky" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
@@ -42,19 +43,19 @@
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                 <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white">
                     <li>
-                        <a href="#" onclick="app.scrollToElementById('service'); return false;" class="block py-2 px-3 text-primary hover:font-plusJakartaSemiBold">Services</a>
+                        <a href="#" onclick="app.scrollToElementById('service'); return false;"class="block py-2 px-3 text-primary font-plusJakartaSemiBold">Services</a>
                     </li>
                     <li>
-                        <a href="#" onclick="app.scrollToElementById('portofolio'); return false;" class="block py-2 px-3 text-primary hover:font-plusJakartaSemiBold0">Portofolio</a>
+                        <a href="#" onclick="app.scrollToElementById('portofolio'); return false;" class="block py-2 px-3 text-primary font-plusJakartaSemiBold">Portfolio</a>
                     </li>
                     <li>
-                        <a href="#" onclick="app.scrollToElementById('client'); return false;" class="block py-2 px-3 text-primary hover:font-plusJakartaSemiBold">Client</a>
+                        <a href="#" onclick="app.scrollToElementById('client'); return false;" class="block py-2 px-3 text-primary font-plusJakartaSemiBold">Client</a>
                     </li>
                     <li>
-                        <a href="#" onclick="app.scrollToElementById('about'); return false;"  class="block py-2 px-3 text-primary hover:font-plusJakartaSemiBold">About</a>
+                        <a href="#" onclick="app.scrollToElementById('about'); return false;" class="block py-2 px-3 text-primary font-plusJakartaSemiBold">About</a>
                     </li>
                     <li>
-                        <a href="#" onclick="app.scrollToElementById('contactUs'); return false;" class="block py-2 px-3 text-primary hover:font-plusJakartaSemiBold">Contact Us</a>
+                        <a href="#" onclick="app.scrollToElementById('contactUs'); return false;" class="block py-2 px-3 text-primary font-plusJakartaSemiBold">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -63,73 +64,27 @@
   
     <section id="content" class="mx-auto min-h-body w-full max-w-screen-xl px-4">
         <div id="home" class="flex flex-row items-center justify-start pb-14 min-h-body">
-            <div class="flex flex-col gap-6">
-                <img src="assets/src/img/black.png" class="w-full h-auto max-w-[120px] aspect-square" alt="Afterlensa Logo">
-                <h1 class="text-3xl lg:text-5xl font-plusJakartaMedium text-left leading-[160%] mt-4">Hi, We are <span class="font-plusJakartaBold">After Lensa</span></h4>
-                <h2 class="text-xl lg:text-3xl font-plusJakarta text-left leading-[160%]">Food & product photographers based in<br>Batam, Indonesia</h4>
-                <div class="mt-6">
-                    <a class="w-auto px-6 py-3 rounded-full bg-primary text-white font-plusJakartaSemiBold hover:bg-hover text-center" href="#" onclick="app.scrollToElementById('service')">
-                        Get to know us
-                    </a>
-                </div>
-            </div>
+            <?php include('layout/home.html')?>
         </div>
 
         <div id="service" class="flex flex-col items-center justify-center lg:min-h-body py-14">
-            <h4 class="text-3xl lg:text-5xl font-plusJakartaBold text-center leading-[160%]">Our Service</h4>
+            <?php include('layout/service.html')?>
         </div>
 
         <div id="portofolio" class="flex flex-col items-center justify-center lg:min-h-body py-14">
-            <h4 class="text-3xl lg:text-5xl font-plusJakartaBold text-center leading-[160%]">Portofolio</h4>
+            <?php include('layout/portofolio.html')?>
         </div>
 
         <div id="client" class="flex flex-col items-center justify-center lg:min-h-body py-14">
-            <h4 class="text-3xl lg:text-5xl font-plusJakartaBold text-center leading-[160%]">Our Client</h4>
-            <div class="flex flex-row flex-wrap items-center justify-center gap-14 mt-16">
-                <?php 
-                    $directory = 'assets/src/img/client';
-                    $clients = scandir($directory);             
-                ?>
-                <?php foreach($clients as $client):  if ($client === '.' || $client === '..') continue; ?>
-                    <img width="100" height="100" class="rounded-full w-[120px] h-[120px] object-cover grayscale" src="assets/src/img/client/<?= $client ?>">
-                <?php endforeach; ?>
-            </div>
+            <?php include('layout/client.html')?>
         </div>
 
         <div id="about" class="flex flex-col items-center justify-center lg:min-h-body py-14">
-            <h4 class="text-3xl lg:text-5xl font-plusJakartaBold text-center leading-[160%]">About Us</h4>
+            <?php include('layout/about.html')?>
         </div>
 
         <div id="contactUs" class="flex flex-col items-center justify-center py-14 lg:min-h-body">
-            <h4 class="text-3xl lg:text-5xl font-plusJakartaBold text-center leading-[160%]">Mau foto produk kamu lebih <span class="highlight">kece</span>?<br>Yuk konsultasikan dengan kami.</h4>
-            <div class="flex flex-row gap-10 mt-14">
-                <a class="md:pl-2 px-4 py-2 rounded-full bg-primary text-white font-plusJakartaSemiBold hover:bg-hover flex flex-row items-center gap-2" href="https://wa.me/6281268178621" target="_blank">
-                    <span class="hidden md:flex items-center justify-center p-2 rounded-full aspect-square w-full max-w-[32px] h-[32px] bg-white"><i class="fa-brands fa-whatsapp text-primary"></i></span>
-                    Contact us
-                </a>
-                <a class="md:pl-2 px-4 py-2 rounded-full bg-primary text-white font-plusJakartaSemiBold hover:bg-hover flex flex-row items-center gap-2" href="https://tinyurl.com/afterlensa-booking" target="_blank">
-                    <span class="hidden md:flex items-center justify-center p-2 rounded-full aspect-square w-full max-w-[32px] h-[32px] bg-white"><i class="fa-regular fa-calendar-check text-primary"></i></span>
-                    Booking Session
-                </a>
-            </div>
-            <div class="relative my-14 w-full flex items-center justify-center">
-                <hr class="w-[50%]">
-                <span class="bg-white absolute l-[50%] -top-[13px] px-4">or visit us</span>
-            </div>
-            <div class="flex items-center flex-wrap justify-center gap-6">
-                <a class="flex items-center justify-center p-2 rounded-full aspect-square w-full max-w-[48px] h-[48px] bg-primary hover:bg-[#C13584]" href="https://www.instagram.com/afterlensa" target="_blank">
-                    <i class="fa-brands fa-instagram text-white text-[24px]"></i>
-                </a>
-                <a class="flex items-center justify-center p-2 rounded-full aspect-square w-full max-w-[48px] h-[48px] bg-primary hover:bg-[#ff0050]" href="https://www.tiktok.com/@afterlensa" target="_blank">
-                    <i class="fa-brands fa-tiktok text-white text-[24px]"></i>
-                </a>
-                <a class="flex items-center justify-center p-2 rounded-full aspect-square w-full max-w-[48px] h-[48px] bg-primary hover:bg-[#1877F2]" href="https://www.facebook.com/afterlensa.official" target="_blank">
-                    <i class="fa-brands fa-facebook text-white text-[24px]"></i>
-                </a>
-                <a class="flex items-center justify-center p-2 rounded-full aspect-square w-full max-w-[48px] h-[48px] bg-primary hover:bg-[#c71610]" href="mailto:afterlensa.pp@gmail.com" target="_blank">
-                    <i class="fa-regular fa-envelope text-white text-[24px]"></i>
-                </a>
-            </div>
+            <?php include('layout/contact-us.html')?>
         </div>
     </section>
 
@@ -139,5 +94,6 @@
         </div>
     </footer>
 </body>
-<script src="assets/src/js/app.js"></script>
-</html>
+<script src="assets/src/js/app.js?v=2"></script>
+<script src="assets/node_modules/flowbite/dist/flowbite.js"></script>
+<script src="assets/src/js/splide.min.js"></script>

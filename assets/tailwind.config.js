@@ -1,7 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './../index.html'
+    './../index.html',
+    './../layout/home.html',
+    './../layout/service.html',
+    './../layout/portofolio.html',
+    './../layout/about.html',
+    './../layout/client.html',
+    './../layout/contact-us.html',
   ],
   theme: {
     extend: {
@@ -24,6 +30,8 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }
 

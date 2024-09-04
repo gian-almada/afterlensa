@@ -1,0 +1,26 @@
+<h4 class="text-3xl lg:text-5xl font-plusJakartaBold text-center leading-[160%]">Portfolio</h4>
+<div class="mt-14 w-full grid grid-cols-1 md:grid-cols-3">
+    <?php 
+        $directory = 'assets/src/img/porto';
+        $clients = scandir($directory);
+        $title = ['Food', 'Product', 'Drink'];
+        $url = ['food.html', 'product.html', 'drink.html'];
+        $cnt = 0;
+    ?>
+    <?php foreach($clients as $client):  if ($client === '.' || $client === '..') continue; ?>
+        <div class="relative w-full aspect-square overflow-hidden group max-w-[500px] md:max-w-none">
+            <img width="150" height="150" class="absolute inset-0 w-full h-full aspect-square object-cover transition-all group-hover:scale-105 group-hover:opacity-50" alt="Portofolio image" src="assets/src/img/porto/<?= $client ?>">
+            <div class="relative w-full h-full p-5">
+                <div class=" transition-all bg-black absolute inset-0 opacity-0 group-hover:opacity-40"></div>
+                <div class="w-full h-full transition-all transform opacity-0 group-hover:opacity-100">
+                    <div class="flex flex-col gap-6 w-full h-full items-center justify-center p-6">
+                        <p class="text-3xl lg:text-4xl font-plusJakartaBold text-white uppercase">
+                            <?= $title[$cnt] ?>
+                        </p>
+                        <a href="<?= $url[$cnt]; ?>" target="_blank" class="border border-white text-white rounded-full px-4 py-2 hover:bg-white hover:text-primary">See more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     <?php $cnt++; endforeach; ?>
+</div>
